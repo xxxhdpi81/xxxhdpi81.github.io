@@ -1,0 +1,336 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.4; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  word-break: keep-all; }
+
+.container {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.app {
+  overflow: hidden; }
+
+@keyframes rotate {
+  0% {
+    transform: none; }
+  100% {
+    transform: rotate(360deg); } }
+.rotate {
+  animation: rotate 2s 0s forwards infinite linear; }
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(80px);
+    opacity: 0; }
+  100% {
+    transform: none;
+    opacity: 1; } }
+.fade-in-up {
+  animation: fadeInUp 1s both; }
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  display: none; }
+  .header .container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .header .logo {
+    font-size: 20px;
+    color: #2b2b2b; }
+  .header nav .gnb {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header nav .gnb .nav-item {
+      padding: 8px 15px; }
+      .header nav .gnb .nav-item .nav-link {
+        font-size: 13px;
+        color: #4b4b4b; }
+        .header nav .gnb .nav-item .nav-link.list-color {
+          color: orange; }
+
+.visual {
+  background: #fff url("../images/main.jpg") 50% 50%/cover no-repeat;
+  height: 100vh;
+  position: relative; }
+  .visual .txt {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 0.4s; }
+    .show-about-me .visual .txt {
+      opacity: 0; }
+    .visual .txt .txt-wrap h4 {
+      font-size: 20px;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 300;
+      text-transform: uppercase; }
+    .visual .txt .txt-wrap h1 {
+      font-size: 112px;
+      color: #fff;
+      font-weight: 300; }
+  .visual .set-color {
+    width: 166px;
+    height: 140px;
+    background-color: #fff;
+    position: fixed;
+    top: 30%;
+    right: -166px;
+    z-index: 2000;
+    transition: 0.2s; }
+    .open-set-color .visual .set-color {
+      right: 0; }
+    .visual .set-color .title {
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .visual .set-color .title h5 {
+        color: #2b2b2b;
+        font-size: 14px; }
+    .visual .set-color .color-switch .top {
+      display: flex;
+      justify-content: center; }
+      .visual .set-color .color-switch .top .color {
+        width: 20px;
+        height: 20px;
+        margin: 6px; }
+        .visual .set-color .color-switch .top .color.green {
+          background-color: greenyellow; }
+        .visual .set-color .color-switch .top .color.pink {
+          background-color: hotpink; }
+        .visual .set-color .color-switch .top .color.yellow {
+          background-color: yellow; }
+        .visual .set-color .color-switch .top .color.purple {
+          background-color: mediumpurple; }
+    .visual .set-color .color-switch .bottom {
+      display: flex;
+      justify-content: center; }
+      .visual .set-color .color-switch .bottom .color {
+        width: 20px;
+        height: 20px;
+        margin: 6px; }
+        .visual .set-color .color-switch .bottom .color.skyblue {
+          background-color: skyblue; }
+        .visual .set-color .color-switch .bottom .color.orange {
+          background-color: orange; }
+        .visual .set-color .color-switch .bottom .color.blue {
+          background-color: blue; }
+    .visual .set-color .btn-settings {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: -40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      /*
+      &:hover {
+        transform: rotate(360deg);
+      }
+       */ }
+      .visual .set-color .btn-settings span {
+        color: #2b2b2b;
+        font-size: 20px; }
+
+.section-about-me {
+  position: relative;
+  margin-top: -200px;
+  opacity: 0;
+  transition: 0.4s;
+  transform: translateY(60px); }
+  .show-about-me .section-about-me {
+    opacity: 1;
+    transform: none; }
+  .section-about-me .container .about-me {
+    max-width: 950px;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; }
+    .section-about-me .container .about-me .txt {
+      flex: 6; }
+      .section-about-me .container .about-me .txt h4 {
+        font-size: 32px;
+        color: #2b2b2b;
+        margin-bottom: 30px; }
+      .section-about-me .container .about-me .txt p {
+        color: #656565;
+        font-size: 20px;
+        font-weight: 300; }
+    .section-about-me .container .about-me .photo {
+      flex: 4;
+      margin-left: 30px; }
+      .section-about-me .container .about-me .photo img {
+        border-radius: 50%;
+        width: 300px;
+        height: 300px; }
+
+.section-my-service {
+  padding-top: 100px; }
+  .section-my-service .title-area {
+    text-align: center;
+    margin-bottom: 50px; }
+    .section-my-service .title-area p {
+      font-size: 12px;
+      color: #887788;
+      margin-bottom: 10px; }
+    .section-my-service .title-area h2 {
+      font-size: 30px;
+      font-weight: 700; }
+  .section-my-service ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .section-my-service ul li {
+      width: 33.3333%;
+      padding: 15px; }
+  .section-my-service .card .card-img {
+    background: url(https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) 50% 50%/cover no-repeat;
+    height: 240px; }
+    .section-my-service .card .card-img .txt-area {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-my-service .card .card-img .txt-area .text-bg {
+        width: 165px;
+        height: 40px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px; }
+        .section-my-service .card .card-img .txt-area .text-bg h5 {
+          font-size: 14px;
+          color: #333; }
+
+.section-my-expertises {
+  background-color: #f7f7f7;
+  padding-top: 100px; }
+  .section-my-expertises .title-area {
+    text-align: center;
+    margin-bottom: 50px; }
+    .section-my-expertises .title-area p {
+      font-size: 12px;
+      color: #887788;
+      margin-bottom: 10px; }
+    .section-my-expertises .title-area h2 {
+      font-size: 30px;
+      font-weight: 700; }
+  .section-my-expertises .expertises {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px; }
+    .section-my-expertises .expertises .group {
+      width: 50%;
+      padding: 0 15px; }
+      .section-my-expertises .expertises .group h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 24px; }
+      .section-my-expertises .expertises .group ul li + li {
+        margin-top: 30px; }
+  .section-my-expertises .card {
+    background-color: #fff;
+    cursor: pointer;
+    padding: 20px;
+    transition: 0.6s; }
+    .section-my-expertises .card.on {
+      transform: translateY(-8px);
+      box-shadow: 1px 2px 30px rgba(0, 0, 0, 0.15); }
+    .section-my-expertises .card h4 {
+      font-size: 18px;
+      margin-bottom: 16px; }
+    .section-my-expertises .card .txt-bg {
+      background-color: #fd735a;
+      border-radius: 4px;
+      width: 150px;
+      height: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-my-expertises .card .txt-bg h6 {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 300; }
+    .section-my-expertises .card p {
+      font-weight: 300;
+      font-size: 18px;
+      color: #6e7373;
+      margin-bottom: 20px; }
+
+/*# sourceMappingURL=style.css.map */

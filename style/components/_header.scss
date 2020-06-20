@@ -1,0 +1,40 @@
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  display: none;
+
+  .container {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 20px;
+    color: #2b2b2b;
+  }
+
+  nav {
+    .gnb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .nav-item {
+        padding: 8px 15px;
+        .nav-link {
+          font-size: 13px;
+          color: #4b4b4b;
+          &.list-color {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+
+}
